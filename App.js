@@ -30,6 +30,7 @@ export default function App() {
               onPress={() => setSelectionIndex(rowKey * 9 + key)}
               number={n}
               key={key}
+              index={rowKey * 9 + key}
             />
           );
         })}
@@ -46,7 +47,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>The non retarded sudoku android app.</Text>
+      <Text style={styles.text}>
+        The <strike>non</strike> retarded sudoku android app.
+      </Text>
       {/*This creates the playing field*/}
       <View>
         {selectionIndex !== null && (
