@@ -87,16 +87,6 @@ const STYLE_LOOKUP = {
   48: [styles.defaultBorder, styles.leftBorder, styles.bottomBorder],
   49: [styles.defaultBorder, styles.bottomBorder],
   50: [styles.defaultBorder, styles.rightBorder, styles.bottomBorder],
-  //Box 5 3*3
-  30: [styles.defaultBorder, styles.topBorder, styles.leftBorder],
-  31: [styles.defaultBorder, styles.topBorder],
-  32: [styles.defaultBorder, styles.topBorder, styles.rightBorder],
-  39: [styles.defaultBorder, styles.leftBorder],
-  40: [styles.defaultBorder],
-  41: [styles.defaultBorder, styles.rightBorder],
-  48: [styles.defaultBorder, styles.leftBorder, styles.bottomBorder],
-  49: [styles.defaultBorder, styles.bottomBorder],
-  50: [styles.defaultBorder, styles.rightBorder, styles.bottomBorder],
   //Box 6 3*3
   33: [styles.defaultBorder, styles.topBorder, styles.leftBorder],
   34: [styles.defaultBorder, styles.topBorder],
