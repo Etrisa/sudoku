@@ -14,12 +14,6 @@ export default function App() {
 
   const [selectionIndex, setSelectionIndex] = useState(null);
 
-  const onBoxPress = (number, index) => {
-    const newNumbers = [...numbers];
-    newNumbers[index] = number;
-    setNumbers(newNumbers);
-  };
-
   function renderRow(numbers, rowKey) {
     return (
       <View style={styles.row} key={rowKey}>
@@ -42,7 +36,6 @@ export default function App() {
     const newNumbers = [...numbers];
     newNumbers[index] = number;
     setNumbers(newNumbers);
-    console.log("penis", number, index);
   };
 
   return (
