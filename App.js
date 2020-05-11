@@ -3,12 +3,13 @@ import _ from "lodash";
 import { Box } from "./src/Box";
 import { SelectionBox } from "./src/SelectionBox";
 import { StyleSheet, Text, View } from "react-native";
+import { TapGestureHandler } from "react-native-gesture-handler";
 import styled from "styled-components/native";
 
 export default function App() {
   const [numbers, setNumbers] = useState(
     [...Array(81).keys()].map(function (n) {
-      return 0;
+      return null;
     })
   );
 
@@ -40,9 +41,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>
-        The <strike>non</strike> retarded sudoku android app.
-      </Text>
+      <Text style={styles.text}>The non retarded sudoku android app.</Text>
       {/*This creates the playing field*/}
       <View>
         {selectionIndex !== null && (
@@ -54,9 +53,11 @@ export default function App() {
             }}
           />
         )}
-        {_.chunk(numbers, 9).map(function (n, key) {
-          return renderRow(n, key);
-        })}
+        <View>
+          {_.chunk(numbers, 9).map(function (n, key) {
+            return renderRow(n, key);
+          })}
+        </View>
       </View>
     </View>
   );
@@ -75,6 +76,6 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "white",
-    fontSize: "30px",
+    fontSize: 30,
   },
 });
